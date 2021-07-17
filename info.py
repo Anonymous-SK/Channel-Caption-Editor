@@ -10,3 +10,4 @@ class ns(object):
   CAPTION = os.environ.get("FILES_CAPTION", "")
   OWNER_ID = int(os.environ.get("OWNER_ID", "")
   BUTTON_NAME = os.environ.get("BUTTON_NAME", "")
+  OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "")
