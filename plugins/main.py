@@ -33,5 +33,5 @@ CAPTION_BUTTON = [[
              InlineKeyboardButton(f'{BUTTON_NAME}', url=f"BUTTON_URL")
         ]]
 @Client.on_message(filters.document & filters.channel)
-async def cpation_text(Client , message):
-  await message.edit(CAPTION , reply_markup=InlineKeyboardMarkup(CAPTION_BUTTON))
+async def cation_text(Client , message):
+  await message.edit_message_caption(caption=CAPTION , reply_markup=InlineKeyboardMarkup(CAPTION_BUTTON))
