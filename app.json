@@ -1,0 +1,65 @@
+{
+  "name": "Caption Editor",
+  "description": "Telegram bot to edit your Channel files caption",
+  "keywords": [
+    "telegram",
+    "best",
+    "Cation",
+    "Editor",
+    "for",
+    "channels"
+  ]
+   "logo": "https://telegra.ph/file/5cd4bcbbbb4ade6c407af.jpg",
+  "success_url": "https://telegram.dog/Ns_Bots_Updates",
+  "website": "https://github.com/Anonymous-sk/Channel-Caption-Editor",
+  "repository": "https://github.com/Anonymous-Sk/Channel-Caption-Editor",
+  "API_ID": {
+      "description": "Enter your API ID , Get it from https://my.telegram.org",
+      "value": ""
+    },
+  "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+  "BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+  "OWNER_ID": {
+      "description": "give your telegram user id here",
+      "value": ""
+    },
+  "OWNER_USERNAME": {
+      "description": "give your telegram user name here without @ , If you don't have Username leave this empty",
+      "value": "Ns_bots_updates"
+    },
+  "FILES_CAPTION": {
+      "description": "Enter your Files Custom Caption here",
+      "value": ""
+    },
+  "BUTTON_URL": {
+      "description": "Your channel or Group link Here",
+      "value": ""
+    },
+  "BUTTON_NAME": {
+      "description": "Enter URL button Name here ... Like NS Bots",
+      "value": ""
+    },
+  "addons": [
+  {
+    "plan": "heroku-postgresql",
+    "options": {"version": "12"}
+  }
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
