@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info.ns import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION 
+from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID
 
 keyboard = [
         [
