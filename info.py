@@ -24,4 +24,6 @@ about_text = f"""--**My Details:**--
 📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
 
 👥 𝐆𝐫𝐨𝐮𝐩: [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
+
+📎 SOURCE CODE : [Click Here 😍](https://github.com/Anonymous-SK/Channel-Caption-Editor)
 """
