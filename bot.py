@@ -3,7 +3,7 @@
 import os
 import logging
 import pyrogram 
-from info import 
+from info import BOT_TOKEN , API_ID , API_HASH
 
 
 if __name__ == "__main__" :
