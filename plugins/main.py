@@ -1,6 +1,6 @@
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID , about_text
+from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID 
 
 @Client.on_callback_query(filters.regex('^close$'))
 async def close_cb(c, m):
@@ -10,6 +10,23 @@ async def close_cb(c, m):
 async def about_cb(c, m):
     owner = await Client.get_users(int(OWNER_ID))
     await m.answer()
+about_text = f"""--**My Details:**--
+
+🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: Caption Editor Bot
+    
+📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
+
+🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
+
+👨‍💻 Developer : {owner.mention(style='md')} 
+
+📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
+
+👥 𝐆𝐫𝐨𝐮𝐩: [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
+
+📎 SOURCE CODE : [Click Here 🥰](https://github.com/Anonymous-SK/Channel-Caption-Editor)
+"""
+
     await m.message.edit(
         text=about_text,
         reply_markup=InlineKeyboardMarkup([[
