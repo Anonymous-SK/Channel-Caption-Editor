@@ -26,7 +26,7 @@ about_text = f"""--**My Details:**--
 
 📎 SOURCE CODE : [Click Here 🥰](https://github.com/Anonymous-SK/Channel-Caption-Editor)
 """
-   await m.message.edit(
+    await m.message.edit(
         text=about_text,
         reply_markup=InlineKeyboardMarkup([[
              InlineKeyboardButton('Close 🔐', callback_data="close")
