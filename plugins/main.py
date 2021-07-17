@@ -22,7 +22,9 @@ keyboard = [
         [
             InlineKeyboardButton('My Owner', url=f"https://t.me/{OWNER_USERNAME}"),
             InlineKeyboardButton('About', callback_data="about")
-        ]
+        ],[ 
+            InlineKeyboardButton('Close 🔐' , callback_data='close')
+]
     ]
 
 @Client.on_message(filters.command("start") & filters.private)
