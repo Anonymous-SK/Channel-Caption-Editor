@@ -6,10 +6,6 @@ from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID
 async def close_cb(c, m):
     await m.message.delete()
 
-@Client.on_callback_query(filters.regex('^about'))
-async def about_cb(c, m):
-    owner = await Client.get_users(int(OWNER_ID))
-    await m.answer()
 about_text = f"""--**My Details:**--
 
 🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: Caption Editor Bot
@@ -18,7 +14,7 @@ about_text = f"""--**My Details:**--
 
 🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-👨‍💻 Developer : {owner.mention(style='md')} 
+👨‍💻 Developer : [This Person](tg://user?id={OWNER_ID})
 
 📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
 
@@ -26,6 +22,10 @@ about_text = f"""--**My Details:**--
 
 📎 SOURCE CODE : [Click Here 🥰](https://github.com/Anonymous-SK/Channel-Caption-Editor)
 """
+
+@Client.on_callback_query(filters.regex('^about'))
+async def about_cb(c, m):
+    await m.answer()
     await m.message.edit(
         text=about_text,
         reply_markup=InlineKeyboardMarkup([[
