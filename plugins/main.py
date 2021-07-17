@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID , about_text
+from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID , about_text 
 
 @Client.on_callback_query(filters.regex('^close$'))
 async def close_cb(c, m):
@@ -29,11 +29,8 @@ keyboard = [
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(Client , message):
-  await message.reply_text(f"Hello there \ni am channel caption editor bot \n\n👲 Maintained By:**[This Person](tg://user?id={OWNER_ID})**" , reply_markup=InlineKeyboardMarkup(keyboard))
+  await message.reply_text(f"Hello there \n\n **💡 i am channel caption editor bot **\n\n👲 Maintained By:**[This Person](tg://user?id={OWNER_ID})**" , reply_markup=InlineKeyboardMarkup(keyboard))
 
-CAPTION_BUTTON = [[
-             InlineKeyboardButton(f'{BUTTON_NAME}', url=f"BUTTON_URL")
-        ]]
 @Client.on_message(filters.document & filters.channel)
 async def cation_text(Client , message):
-  await message.edit(CAPTION , reply_markup=InlineKeyboardMarkup(CAPTION_BUTTON))
+  await message.edit(CAPTION)
