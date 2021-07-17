@@ -1,2 +1,9 @@
 # Channel-Caption-Editor
-This bot can edit caption of your files when you sent files to your Telegram channel 😒
+
+## Deploy to heroku 🗳
+Press the button Deploy to heroku and give the values for the config vars. 👇
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Ns-Bots/TG-File-Store)
+
+
+### Developer [Mahan MV Admin](https://t.me/MahanMVAdmin)
