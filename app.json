@@ -36,8 +36,8 @@
             "description": "Your caption button url here .. Like https://t.me/NS_Bots_Updates",
             "value": ""
         },
-        "FILE_CAPTION": {
-            "description": "Enter your Custom caption here",
+        "FILES_CAPTION": {
+            "description": "Enter your files Custom caption here",
             "value": ""
         },
         "OWNER_ID": {
