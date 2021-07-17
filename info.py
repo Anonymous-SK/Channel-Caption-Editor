@@ -19,7 +19,7 @@ about_text = f"""--**My Details:**--
 
 🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-👨‍💻 Creator : [This Person](tg://user?id={OWNER_ID})
+👨‍💻 Developer : [This Person](tg://user?id={OWNER_ID})
 
 📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
 
@@ -27,3 +27,10 @@ about_text = f"""--**My Details:**--
 
 📎 SOURCE CODE : [Click Here 😍](https://github.com/Anonymous-SK/Channel-Caption-Editor)
 """
+
+reply_markup = InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]
+            ]
+                                           )
+                      )
