@@ -3,7 +3,7 @@
 import os
 import logging
 import pyrogram
-from config import Config  
+from info import ns 
 
 
 if __name__ == "__main__" :
