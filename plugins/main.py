@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID , about_text , reply_markup
+from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID , about_text
 
 @Client.on_callback_query(filters.regex('^close$'))
 async def close_cb(c, m):
