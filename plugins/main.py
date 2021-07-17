@@ -1,7 +1,7 @@
 from pyrogram import Client , filters
 from pyrogram.type import InlineKeyboardButton , InlineKeyboardMarkup
 from pyrogram.errors import floodwait
-from info import OWNER_ID , BUTTON_URL , CAPTION , OWNER_USERNAME , BUTTON_NAME 
+from info import ns
 
 ns_keyboard = [
         [
