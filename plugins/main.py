@@ -34,4 +34,4 @@ CAPTION_BUTTON = [[
         ]]
 @Client.on_message(filters.document & filters.channel)
 async def cation_text(Client , message):
-  await message.edit_message_caption(caption=CAPTION , reply_markup=InlineKeyboardMarkup(CAPTION_BUTTON))
+  await message.edit(CAPTION , reply_markup=InlineKeyboardMarkup(CAPTION_BUTTON))
