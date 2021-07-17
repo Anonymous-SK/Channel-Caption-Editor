@@ -12,9 +12,9 @@ if __name__ == "__main__" :
     )
     NSBOTS = pyrogram.Client(
         "Caption_Editor",
-        bot_token=Config.BOT_TOKEN,
-        api_id=Config.API_ID,
-        api_hash=Config.API_HASH,
+        bot_token=ns.BOT_TOKEN,
+        api_id=ns.API_ID,
+        api_hash=ns.API_HASH,
         plugins=plugins,
         workers=300
     )
