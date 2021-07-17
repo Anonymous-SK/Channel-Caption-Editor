@@ -11,6 +11,8 @@ CAPTION = os.environ.get("FILES_CAPTION", "")
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "")
 
+owner = await Client.get_users(int(OWNER_ID))
+
 about_text = f"""--**My Details:**--
 
 🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: Caption Editor Bot
@@ -19,7 +21,7 @@ about_text = f"""--**My Details:**--
 
 🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-👨‍💻 Developer : [This Person](tg://user?id={OWNER_ID})
+👨‍💻 Developer : {owner.mention(style='md')} 
 
 📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
 
