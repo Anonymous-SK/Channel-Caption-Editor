@@ -2,7 +2,7 @@
 
 import os
 
-class ns(object):
+class config(object):
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
   API_ID = int(os.environ.get("API_ID", 12345))
   API_HASH = os.environ.get("API_HASH", "")
@@ -10,4 +10,3 @@ class ns(object):
   BUTTON_NAME = os.environ.get("BUTTON_NAME", "")
   CAPTION = os.environ.get("FILES_CAPTION", "")
   OWNER_ID = int(os.environ.get("OWNER_ID", "")
-  OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "")
