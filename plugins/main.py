@@ -1,5 +1,5 @@
 from pyrogram import Client , filters
-from pyrogram.type import InlineKeyboardButton , InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
 from pyrogram.errors import floodwait
 from info import ns
 
