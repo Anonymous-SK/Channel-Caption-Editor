@@ -1,11 +1,9 @@
 import os
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info import ns
+from info.ns import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION 
 
-OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "")
-
-ns_keyboard = [
+keyboard = [
         [
             InlineKeyboardButton('My Owner', url=f"https://t.me/{OWNER_USERNAME}"),
             InlineKeyboardButton('About', callback_data="about")
@@ -14,7 +12,7 @@ ns_keyboard = [
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(Client , message):
-  await message.reply_text(f"Hello there \ni am channel caption editor bot \n\n👲 Maintained By:** {owner.mention(style='md')}**" , reply_markup=InlineKeyboardMarkup(ns_keyboard))
+  await message.reply_text(f"Hello there \ni am channel caption editor bot \n\n👲 Maintained By:** {owner.mention(style='md')}**" , reply_markup=InlineKeyboardMarkup(keyboard))
 
 CAPTION_BUTTON = [[
              InlineKeyboardButton(f'{BUTTON_NAME}', url=f"BUTTON_URL")
