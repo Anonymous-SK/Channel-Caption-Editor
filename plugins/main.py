@@ -1,7 +1,22 @@
 import os
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID
+from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID , about_text
+
+@Client.on_callback_query(filters.regex('^close$'))
+async def close_cb(c, m):
+    await m.message.delete()
+
+@Client.on_callback_query(filters.regex('^about'))
+async def about_cb(c, m):
+    await m.answer()
+    await m.message.edit(
+        text=about_text,
+        reply_markup=InlineKeyboardMarkup([[
+             InlineKeyboardButton('Close 🔐', callback_data="close")
+        ]]),
+        disable_web_page_preview=True
+    )
 
 keyboard = [
         [
