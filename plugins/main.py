@@ -26,7 +26,8 @@ keyboard = [[
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(Client , message):
-  await message.reply_text(f"Hello there \n\n **💡 i am channel caption editor bot **\n\n👲 Maintained By:**[This Person](tg://user?id={OWNER_ID})**" , reply_markup=InlineKeyboardMarkup(keyboard))
+  owner = await c.get_users(int(OWNER_ID))
+  await message.reply_text(f"Hello there \n\n **💡 i am channel caption editor bot **\n\n👲 Maintained By:**{owner.mention(style='md')}**" , reply_markup=InlineKeyboardMarkup(keyboard))
 
 @Client.on_message(filters.document & filters.channel)
 async def cation_text(Client , message):
