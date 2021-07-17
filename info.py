@@ -32,5 +32,4 @@ reply_markup = InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]
             ]
-                                           )
-                      )
+            )
