@@ -27,9 +27,3 @@ about_text = f"""--**My Details:**--
 
 📎 SOURCE CODE : [Click Here 😍](https://github.com/Anonymous-SK/Channel-Caption-Editor)
 """
-
-reply_markup = InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]
-            ]
-            )
