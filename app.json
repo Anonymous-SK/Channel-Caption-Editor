@@ -1,63 +1,63 @@
 {
-  "name": "Caption Editor",
-  "description": "Telegram bot to edit your Channel files caption",
-  "keywords": [
-    "telegram",
-    "best",
-    "Cation",
-    "Editor",
-    "for",
-    "channels"
-  ]
-   "logo" : "https://telegra.ph/file/5cd4bcbbbb4ade6c407af.jpg",
-  "success_url": "https://telegram.dog/Ns_Bots_Updates",
-  "website": "https://github.com/Anonymous-sk/Channel-Caption-Editor",
-  "repository": "https://github.com/Anonymous-Sk/Channel-Caption-Editor",
-  "API_ID": {
-      "description": "Enter your API ID , Get it from https://my.telegram.org",
-      "value": ""
+    "name": "UNLIMITED FILTER BOT",
+    "description": "An unlimited filter bot using Mongo DB",
+    "logo": "https://telegra.ph/file/71aaa621508cd696ab538.jpg",
+    "keywords": [
+        "UNLIMITED",
+        "Filter",
+        "Telegram Bot",
+        "TroJanzHEX"
+    ],
+    "website": "https://TroJanzHEX.me",
+    "repository": "https://github.com/TroJanzHEX/Unlimited-Filter-Bot",
+    "success_url": "https://telegram.dog/TroJanzHEX",
+    "env": {
+        "WEBHOOK": {
+            "description": "No need to change this field!",
+            "value": "ANYTHING"
+        },
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token from @BotFather",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your API Hash from my.telegram.org or @UseTGXBot",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Your APP ID from my.telegram.org or @UseTGXBot",
+            "value": ""
+        },
+        "OWNER_USERNAME": {
+            "description": "ENTER your Username here without @ , if you don't have username keep this empty",
+            "value": "MahanMVAdmin"
+        },
+        "BUTTON_NAME": {
+            "description": "You Caption button's Name Here",
+            "value": ""
+        },
+        "BUTTON_URL": {
+            "description": "Your caption button url here .. Like https://t.me/NS_Bots_Updates",
+            "value": ""
+        },
+        "FILE_CAPTION": {
+            "description": "Enter your Custom caption here",
+            "value": ""
+        },
+        "OWNER_ID": {
+            "description": "Enter your telegram ID Here",
+            "value": ""
+        }
     },
-  "API_HASH": {
-      "description": "Get this value from https://my.telegram.org",
-      "value": ""
-    },
-  "BOT_TOKEN": {
-      "description": "Your bot token, as a string.",
-      "value": ""
-    },
-  "OWNER_ID": {
-      "description": "give your telegram user id here",
-      "value": ""
-    },
-  "OWNER_USERNAME": {
-      "description": "give your telegram user name here without @ , If you don't have Username leave this empty",
-      "value": "Ns_bots_updates"
-    },
-  "FILES_CAPTION": {
-      "description": "Enter your Files Custom Caption here",
-      "value": ""
-    },
-  "BUTTON_URL": {
-      "description": "Your channel or Group link Here",
-      "value": ""
-    },
-  "BUTTON_NAME": {
-      "description": "Enter URL button Name here ... Like NS Bots",
-      "value": ""
-    },
-  "addons": [
-  {
-    "plan": "heroku-postgresql",
-    "options": {"version": "12"}
-  }
-  ],
-  "buildpacks": [{
-    "url": "heroku/python"
-  }],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
     }
-  }
 }
