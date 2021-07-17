@@ -13,7 +13,7 @@ OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "")
 
 about_text = f"""--**My Details:**--
 
-🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: Movies Search NS bot
+🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: Caption Editor Bot
     
 📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
 
