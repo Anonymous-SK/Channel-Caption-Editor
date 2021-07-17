@@ -8,4 +8,5 @@ class ns(object):
   API_HASH = os.environ.get("API_HASH", "")
   BUTTON_URL = os.environ.get("BUTTON_URL", "")
   CAPTION = os.environ.get("FILES_CAPTION", "")
-  OWNER_ID = int(is.environ.get("OWNER_ID", "")
+  OWNER_ID = int(os.environ.get("OWNER_ID", "")
+  BUTTON_NAME = os.environ.get("BUTTON_NAME", "")
