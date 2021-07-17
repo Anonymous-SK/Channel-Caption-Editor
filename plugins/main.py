@@ -26,15 +26,13 @@ about_text = f"""--**My Details:**--
 
 📎 SOURCE CODE : [Click Here 🥰](https://github.com/Anonymous-SK/Channel-Caption-Editor)
 """
-
-    await m.message.edit(
+   await m.message.edit(
         text=about_text,
         reply_markup=InlineKeyboardMarkup([[
              InlineKeyboardButton('Close 🔐', callback_data="close")
         ]]),
         disable_web_page_preview=True
     )
-
 keyboard = [[
             InlineKeyboardButton('My Owner', url=f"https://t.me/{OWNER_USERNAME}"),
             InlineKeyboardButton('About', callback_data="about")
