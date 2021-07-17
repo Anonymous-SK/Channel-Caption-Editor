@@ -5,7 +5,7 @@ from info import OWNER_ID , BUTTON_URL , CAPTION , OWNER_USERNAME , BUTTON_NAME
 
 ns_keyboard = [
         [
-            InlineKeyboardButton('My Owner', url=f"https://t.me/{owner_username}"),
+            InlineKeyboardButton('My Owner', url=f"https://t.me/{OWNER_USERNAME}"),
             InlineKeyboardButton('About', callback_data="about")
         ]
     ]
