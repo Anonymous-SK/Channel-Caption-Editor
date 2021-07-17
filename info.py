@@ -9,4 +9,4 @@ class config(object):
   BUTTON_URL = os.environ.get("BUTTON_URL", "")
   BUTTON_NAME = os.environ.get("BUTTON_NAME", "")
   CAPTION = os.environ.get("FILES_CAPTION", "")
-  OWNER_ID = int(os.environ.get("OWNER_ID", "")
+  OWNER_ID = int(os.environ.get("OWNER_ID", ""))
