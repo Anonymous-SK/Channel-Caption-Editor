@@ -11,8 +11,6 @@ CAPTION = os.environ.get("FILES_CAPTION", "")
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "")
 
-owner = await Client.get_users(int(OWNER_ID))
-
 about_text = f"""--**My Details:**--
 
 🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: Caption Editor Bot
