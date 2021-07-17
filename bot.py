@@ -2,8 +2,8 @@
 
 import os
 import logging
-import pyrogram
-from info import ns 
+import pyrogram 
+from info import 
 
 
 if __name__ == "__main__" :
@@ -12,9 +12,9 @@ if __name__ == "__main__" :
     )
     NSBOTS = pyrogram.Client(
         "Caption_Editor",
-        bot_token=ns.BOT_TOKEN,
-        api_id=ns.API_ID,
-        api_hash=ns.API_HASH,
+        bot_token=BOT_TOKEN,
+        api_id=API_ID,
+        api_hash=API_HASH,
         plugins=plugins,
         workers=300
     )
