@@ -18,14 +18,12 @@ async def about_cb(c, m):
         disable_web_page_preview=True
     )
 
-keyboard = [
-        [
+keyboard = [[
             InlineKeyboardButton('My Owner', url=f"https://t.me/{OWNER_USERNAME}"),
             InlineKeyboardButton('About', callback_data="about")
         ],[ 
             InlineKeyboardButton('Close 🔐' , callback_data='close')
-]
-    ]
+        ]]
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(Client , message):
@@ -34,8 +32,10 @@ async def start(Client , message):
 @Client.on_message(filters.document & filters.channel)
 async def cation_text(Client , message):
   await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]
+         [
+[
+        InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]
             ]
-            )
+            
+                       )
 )
