@@ -1,6 +1,7 @@
 from pyrogram import Client , filters
 from pyrogram.type import InlineKeyboardButton , InlineKeyboardMarkup
 from pyrogram.errors import floodwait
+from info import OWNER_ID , BUTTON_URL , CAPTION 
 
 ns_keyboard = [
         [
@@ -16,4 +17,4 @@ async def start(Client , message):
 
 @Client.on_message(filters.document & filters.channel)
 async def cpation_text(Client , message):
-  await message.reply_text(channel_caption)
+  await message.edit(CAPTION , reply_markup=InlineKeyboardButton(ns_keyboard))
