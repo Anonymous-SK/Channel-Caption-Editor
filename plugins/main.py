@@ -6,33 +6,48 @@ from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID
 async def close_cb(c, m):
     await m.message.delete()
 
-about_text = f"""--**My Details:**--
 
-🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: Caption Editor Bot
+@Client.on_callback_query(filters.regex('^about$'))
+async def about_cb(Client, message):
+    await m.answer()
+    owner = await Client.get_users(int(OWNER_ID))
+    bot = await c.get_me()
+
+    # about text
+    about_text = f"""--**My Details:**--
+🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: {bot.mention(style='md')}
     
 📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
 
 🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-👨‍💻 Developer : [This Person](tg://user?id={OWNER_ID})
+👨‍💻 Creator: {owner.mention(style='md')}
 
 📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
 
 👥 𝐆𝐫𝐨𝐮𝐩: [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
 
-📎 SOURCE CODE : [Click Here 🥰](https://github.com/Anonymous-SK/Channel-Caption-Editor)
+🌐𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞: [Press Me 🥰](https://github.com/Ns-Bots/TG-File-Store)
 """
 
-@Client.on_callback_query(filters.regex('^about'))
-async def about_cb(c, m):
-    await m.answer()
+    # creating buttons
+    buttons = [
+        [
+            InlineKeyboardButton('Home 🏕', callback_data='home'),
+            InlineKeyboardButton('Help 💡', callback_data='help')
+        ],
+        [
+            InlineKeyboardButton('Close 🔐', callback_data='close')
+        ]
+    ]
+
+    # editing message
     await m.message.edit(
         text=about_text,
-        reply_markup=InlineKeyboardMarkup([[
-             InlineKeyboardButton('Close 🔐', callback_data="close")
-        ]]),
+        reply_markup=InlineKeyboardMarkup(buttons),
         disable_web_page_preview=True
     )
+
 keyboard = [[
             InlineKeyboardButton('My Owner', url=f"https://t.me/{OWNER_USERNAME}"),
             InlineKeyboardButton('About', callback_data="about")
