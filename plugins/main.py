@@ -39,7 +39,7 @@ async def about_cb(Client, message):
         [
             InlineKeyboardButton('Close 🔐', callback_data='close')
         ]
-    ]
+   ]
 
     # editing message
     await m.message.edit(
@@ -49,7 +49,7 @@ async def about_cb(Client, message):
     )
 
 keyboard = [[
-            InlineKeyboardButton('My Owner', url=f"https://t.me/{OWNER_USERNAME}"),
+            InlineKeyboardButton('My Father', url=f"https://t.me/{OWNER_USERNAME}"),
             InlineKeyboardButton('About', callback_data="about")
         ],[ 
             InlineKeyboardButton('Close 🔐' , callback_data='close')
