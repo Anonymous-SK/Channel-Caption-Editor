@@ -5,7 +5,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Anonymous-SK/Channel-Caption-Editor)
 
 
-### Developer [Mahan MV Admin](https://t.me/MahanMVAdmin) , 
+### Dev [Mahan MV Admin](https://t.me/MahanMVAdmin) , 
 
 
 
