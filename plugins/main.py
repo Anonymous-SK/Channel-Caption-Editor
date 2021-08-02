@@ -33,9 +33,6 @@ async def about_cb(Client, message):
     # creating buttons
     buttons = [
         [
-            InlineKeyboardButton('Home 🏕', callback_data='home')
-      ],
-        [
             InlineKeyboardButton('Close 🔐', callback_data='close')
         ]
    ]
