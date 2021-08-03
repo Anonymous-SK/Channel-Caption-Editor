@@ -72,7 +72,5 @@ async def cation_text(Client , message):
 
 @Client.on_message(filters.photo & filters.channel)
 async def photo_caption(Client , message):
-  if P_CAPTION == "True":
-        await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
-  else:
-	pass
+  if P_CAPTION =="True":
+    await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
