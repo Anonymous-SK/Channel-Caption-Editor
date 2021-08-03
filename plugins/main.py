@@ -56,7 +56,7 @@ async def start(Client , message):
   owner = await Client.get_users(int(OWNER_ID))
   await message.reply_text(f"Hello there \n\n **💡 i am channel caption editor bot **\n\n👲 Maintained By: **{owner.mention(style='md')}**" , reply_markup=InlineKeyboardMarkup(keyboard))
 
-@Client.on_message(filters.document & filters.channel)
+@Client.on_message((filters.document | filters.video | filters.audio | filters.photo) & filters.channel)
 async def cation_text(Client , message):
   await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup(
 
@@ -68,9 +68,3 @@ async def cation_text(Client , message):
             
                        )
 )
-
-
-@Client.on_message(filters.photo & filters.channel)
-async def photo_caption(Client , message):
-  #if P_CAPTION =="True":
-  await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
