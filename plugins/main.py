@@ -10,7 +10,7 @@ async def close_cb(c, m):
 @Client.on_callback_query(filters.regex('^about$'))
 async def about_cb(c , m):
     await m.answer()
-    owner = await Client.get_users(int(OWNER_ID))
+    owner = await c.get_users(int(OWNER_ID))
     bot = await c.get_me()
 
     # about text
