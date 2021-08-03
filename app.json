@@ -28,6 +28,10 @@
             "description": "ENTER your Username here without @ , if you don't have username keep this empty",
             "value": "MahanMVAdmin"
         },
+        "PHOTO_CAPTION": {
+            "description": "Do you want to Edit caption to Photo's ? (True or False)",
+            "value": "False"
+        },
         "BUTTON_NAME": {
             "description": "Your Caption button Name Here.. Like Join Our Channel , Join Our Group , etc",
             "value": ""
