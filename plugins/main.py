@@ -1,6 +1,6 @@
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID
+from info import OWNER_USERNAME , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID , P_CAPTION
 
 @Client.on_callback_query(filters.regex('^close$'))
 async def close_cb(c, m):
@@ -72,5 +72,7 @@ async def cation_text(Client , message):
 
 @Client.on_message(filters.photo & filters.channel)
 async def photo_caption(Client , message):
-  #if P_CAPTION == "True":
-  await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
+  if P_CAPTION == "True":
+        await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
+  else:
+	pass
