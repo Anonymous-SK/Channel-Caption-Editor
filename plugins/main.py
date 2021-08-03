@@ -74,5 +74,3 @@ async def cation_text(Client , message):
 async def photo_caption(Client , message):
   if PHOTO_CAPTION =="True":
     await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup[[InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]])
-  else:
-    pass
