@@ -76,3 +76,15 @@ async def photo_caption(Client , message):
     return
   await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
+  elif PHOTO_CAPTION =="false":
+    pass
+
+@Client.on_message(filters.video & filters.channel)
+async def audio_caption(Client , message):
+  if AUDIO_CAPTION =="True":
+    return
+  await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[
+        InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
+
+  elif AUDIO_CAPTION =="false":
+    pass
