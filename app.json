@@ -24,7 +24,7 @@
             "description": "Your APP ID from my.telegram.org or @UseTGXBot",
             "value": ""
         },
-        "PHOTO_CAPTIOM": {
+        "PHOTO_CAPTION": {
             "description": "Wanna Add caption to Photos ? True/False",
             "value": "false",
             "required" : false
