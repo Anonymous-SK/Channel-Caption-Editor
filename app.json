@@ -29,6 +29,11 @@
             "value": "false",
             "required" : false
         },
+        "VIDEO_CAPTION": {
+            "description": "Wanna Add caption to video files ? True/False",
+            "value": "false",
+            "required" : false
+        },
         "BUTTON_NAME": {
             "description": "Your Caption button Name Here.. Like Join Our Channel , Join Our Group , etc",
             "value": ""
