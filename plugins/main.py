@@ -21,7 +21,7 @@ async def about_cb(c , m):
 
 🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-👨‍💻 Creator: {owner.mention(style='md')}
+👨‍💻 Developer : {owner.mention(style='md')}
 
 📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
 
@@ -44,19 +44,20 @@ async def about_cb(c , m):
         disable_web_page_preview=True
     )
 
-keyboard = [[
-            InlineKeyboardButton('My Father', url=f"https://t.me/{OWNER_USERNAME}"),
-            InlineKeyboardButton('About', callback_data="about")
-        ],[ 
-            InlineKeyboardButton('Close 🔐' , callback_data='close')
-        ]]
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(Client , message):
   owner = await Client.get_users(int(OWNER_ID))
-  await message.reply_text(f"Hello there \n\n **💡 i am channel caption editor bot **\n\n👲 Maintained By: **{owner.mention(style='md')}**" , reply_markup=InlineKeyboardMarkup(keyboard))
+  owner_username = owner.username if owner.username else 'MahanMVAdmin' 
+  keyboard = [[
+            InlineKeyboardButton('My Father', url=f"https://t.me/{owner_username}"),
+            InlineKeyboardButton('About', callback_data="about")
+        ],[ 
+            InlineKeyboardButton('Close 🔐' , callback_data='close')
+        ]]
+  await message.reply_text(f"Hi {message.from_user.mention} \n\n **💡 i am channel caption editor bot **\n\n👲 Maintained By: **{owner.mention(style='md')}**" , reply_markup=InlineKeyboardMarkup(keyboard))
 
-@Client.on_message((filters.document | filters.video | filters.audio | filters.photo) & filters.channel)
+@Client.on_message(filters.document  & filters.channel)
 async def cation_text(Client , message):
   await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup(
 
@@ -68,3 +69,13 @@ async def cation_text(Client , message):
             
                        )
 )
+
+@Client.on_message(filters.photo & filters.channel)
+async def photo_caption(Client , message):
+  if PHOTO_CAPTION =="True":
+    return
+  await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[
+        InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
+
+  esle:
+   pass
