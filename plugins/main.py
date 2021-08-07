@@ -76,6 +76,3 @@ async def photo_caption(Client , message):
     return
   await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
-
-  esle:
-   pass
