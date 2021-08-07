@@ -24,9 +24,10 @@
             "description": "Your APP ID from my.telegram.org or @UseTGXBot",
             "value": ""
         },
-        "OWNER_USERNAME": {
-            "description": "ENTER your Username here without @ , if you don't have username keep this empty",
-            "value": "MahanMVAdmin"
+        "PHOTO_CAPTIOM": {
+            "description": "Wanna Add caption to Photos ? True/False",
+            "value": "false",
+            "required" : false
         },
         "BUTTON_NAME": {
             "description": "Your Caption button Name Here.. Like Join Our Channel , Join Our Group , etc",
