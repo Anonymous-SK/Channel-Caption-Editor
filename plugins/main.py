@@ -1,6 +1,6 @@
 from pyrogram import Client , filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
-from info import AUDIO_CAPTION ,PHOTO_CAPTION , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID
+from info import VIDEO_CAPTION ,PHOTO_CAPTION , BUTTON_NAME , BUTTON_URL , CAPTION , OWNER_ID
 
 @Client.on_callback_query(filters.regex('^close$'))
 async def close_cb(c, m):
@@ -81,10 +81,10 @@ async def photo_caption(Client , message):
 
 @Client.on_message(filters.video & filters.channel)
 async def audio_caption(Client , message):
-  if AUDIO_CAPTION =="True":
+  if VIDEO_CAPTION =="True":
     return
   await message.edit(CAPTION , reply_markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(f"{BUTTON_NAME}", url=f"{BUTTON_URL}")]]))
 
-  elif AUDIO_CAPTION =="false":
+  elif VIDEO_CAPTION =="false":
     pass
